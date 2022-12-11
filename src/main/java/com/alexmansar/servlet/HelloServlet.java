@@ -2,27 +2,19 @@ package com.alexmansar.servlet;
 
 import java.io.*;
 
+
+import com.alexmansar.controller.Controller;
+import com.alexmansar.model.Model;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
-    private String message;
 
-    public void init() {
-        message = "Hello World!";
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        Controller controller = ServletHelper.getController();
+        Model model = controller.getModel();
+        request.setAttribute("name", model);
+        getServletContext().getRequestDispatcher("/first.jsp").forward(request, response);
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
-    }
-
-    public void destroy() {
-    }
 }

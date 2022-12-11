@@ -1,0 +1,120 @@
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+td, th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px 20px;
+}
+
+th {
+    background-color: rgb(235, 235, 235);
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) td {
+    background-color: rgb(250, 250, 250);
+}
+
+tr:nth-child(odd) td {
+    background-color: rgb(245, 245, 245);
+}
+
+caption {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    margin: 0 20px;
+    font-size: 24px;
+    font-family: 'Fredoka One', cursive;
+    transition: .3s ease-in-out;
+}
+
+.rounded {
+    counter-reset: li;
+    list-style: none;
+    font: 14px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.rounded a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    margin: .5em 0;
+    background: #DAD2CA;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: .3s ease-out;
+}
+.rounded a:hover {background: #E9E4E0;}
+.rounded a:hover:before {transform: rotate(360deg);}
+.rounded a:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #8FD4C1;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
+.one {
+    background: #FFF4ED;
+    padding: 50px 20px;
+    text-align: center;
+}
+.one h1 {
+    font-family: 'Righteous', cursive;
+    position: relative;
+    color: #3CA1D9;
+    display: inline-block;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    font-size: 3em;
+    padding: 11px 60px;
+    margin: 0;
+    line-height: 1;
+}
+.one h1:before , .one h1:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    background: repeating-linear-gradient(180deg, transparent, transparent 2px, #3CA1D9 2px, #3CA1D9 4px);
+}
+.one h1:before {left: 0;}
+.one h1:after {right: 0;}
+@media (max-width: 420px) {
+    .one h1 {font-size: 2em;}
+}
+
+.one p {
+    text-align: left;
+    font-size: 22px;
+    letter-spacing: .05em;
+    line-height: 1.4;
+}

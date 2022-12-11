@@ -3,4 +3,26 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
+    <servlet>
+        <servlet-name>helloServlet</servlet-name>
+        <servlet-class>com.alexmansar.servlet.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>helloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getAll</servlet-name>
+        <servlet-class>com.alexmansar.servlet.GetAllServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAll</servlet-name>
+        <url-pattern>/all</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.html</location>
+    </error-page>
 </web-app>
