@@ -11,10 +11,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-public class GetAllServlet extends HttpServlet {
+public class GetAllServlet extends HttpServlet implements ServletHelper {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Controller controller = ServletHelper.getController();
+        Controller controller = getController();
         List<Model> models = controller.gelAllModel();
         request.setAttribute("models", models);
         getServletContext().getRequestDispatcher("/allJokes.jsp").forward(request, response);
