@@ -17,6 +17,6 @@
   <p>${requestScope.name}</p>
 </div>
 
-<a href="http://localhost:8080/all">All jokes</a>
+<a href="controller?action=all">All jokes</a>
 </body>
 </html>

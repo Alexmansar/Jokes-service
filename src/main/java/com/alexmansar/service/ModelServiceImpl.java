@@ -18,5 +18,4 @@ public class ModelServiceImpl implements ModelService {
     public List<Model> getAllModel() {
         return modelRepository.getActorList();
     }
-
 }
