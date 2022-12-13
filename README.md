@@ -12,6 +12,7 @@ ___
 + `Hibernate`
 + `mySql`
 + `Apache Tomcat`
++ `Java servlet`
 + `jsp`
 + `css`
 + `html`
