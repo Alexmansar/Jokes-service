@@ -11,17 +11,13 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@ToString
 @Table(name = "jokes")
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Model {
+public class Joke {
     @Id
     Long id;
     String type;
     String setup;
     String punchline;
-
-    @Override
-    public String toString() {
-        return " " + setup + " " + punchline;
-    }
 }

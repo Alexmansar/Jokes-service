@@ -1,6 +1,6 @@
 package com.alexmansar.repository;
 
-import com.alexmansar.model.Model;
+import com.alexmansar.model.Joke;
 import com.alexmansar.util.SessionUtil;
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.CriteriaBuilder;
@@ -11,14 +11,14 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.List;
 
 @Slf4j
-public class ModelRepository extends SessionUtil {
+public class JokeRepository extends SessionUtil {
 
-    public List<Model> getActorList() {
+    public List<Joke> getJokesList() {
         CriteriaBuilder cb = session.getCriteriaBuilder();
-        CriteriaQuery<Model> cq = cb.createQuery(Model.class);
-        Root<Model> rootEntry = cq.from(Model.class);
-        CriteriaQuery<Model> all = cq.select(rootEntry);
-        TypedQuery<Model> allQuery = session.createQuery(all);
+        CriteriaQuery<Joke> cq = cb.createQuery(Joke.class);
+        Root<Joke> root = cq.from(Joke.class);
+        CriteriaQuery<Joke> allJoke = cq.select(root);
+        TypedQuery<Joke> allQuery = session.createQuery(allJoke);
         return allQuery.getResultList();
     }
 }

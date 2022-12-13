@@ -1,8 +1,8 @@
 package com.alexmansar.service;
 
 
-import com.alexmansar.model.Model;
-import com.alexmansar.repository.ModelRepository;
+import com.alexmansar.model.Joke;
+import com.alexmansar.repository.JokeRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -11,11 +11,10 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class ModelServiceImpl implements ModelService {
-    ModelRepository modelRepository;
-
+public class JokeServiceImpl implements JokeService {
+    JokeRepository jokeRepository;
     @Override
-    public List<Model> getAllModel() {
-        return modelRepository.getActorList();
+    public List<Joke> getAllJokes() {
+        return jokeRepository.getJokesList();
     }
 }

@@ -18,6 +18,7 @@ public class HibernateUtil {
             sessionFactory = new MetadataSources(registry)
                     .buildMetadata()
                     .buildSessionFactory();
+            log.info(String.valueOf(sessionFactory.isOpen()));
 
         } catch (Exception e) {
             log.error(e.getMessage());
