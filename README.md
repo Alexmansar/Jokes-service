@@ -7,7 +7,7 @@ Main 2 working links:
 2. display of all jokes from the database
 
 when an invalid link is entered, a window is displayed "Page not found".
-
+___
 ## In that project, I used next technologies:
 + `Hibernate`
 + `mySql`
@@ -28,6 +28,6 @@ Error page
 
 ![error](https://github.com/Alexmansar/images/blob/main/jokes-service/error.JPG)
 
-
+___
 ### Create new database
 You can use folder "database", to initialization database for this app.
