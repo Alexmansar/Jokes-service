@@ -22,7 +22,7 @@ Random joke page
 
 All jokes table
 
-![all](https://github.com/Alexmansar/images/blob/main/jokes-service/random.JPG)
+![all](https://github.com/Alexmansar/images/blob/main/jokes-service/all.JPG)
 
 Error page
 
