@@ -7,15 +7,14 @@
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 
-        <property name="connection.url">jdbc:mysql://localhost:3306/joke-service?serverTimezone=UTC</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/JOKE_SERVICE?serverTimezone=UTC</property>
         <property name="connection.username">root</property>
         <property name="connection.password"/>
 
         <property name="hibernate.connection.characterEncoding">utf8</property>
         <property name="connection.autocommit">true</property>
         <property name="hbm2ddl.auto">update</property>
-        <property name="default_schema">joke-service</property>
-
+        <property name="default_schema">JOKE_SERVICE</property>
 
         <property name="hibernate.current_session_context_class">thread</property>
         <mapping class="com.alexmansar.model.Joke"/>

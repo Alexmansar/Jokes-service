@@ -27,3 +27,7 @@ All jokes table
 Error page
 
 ![error](https://github.com/Alexmansar/images/blob/main/jokes-service/error.JPG)
+
+
+### Create new database
+You can use folder "database", to initialization database for this app.
